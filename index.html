@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="api.js"></script>
+    <script src="loader.js"></script>
+    <script src="index.js"></script>
+
+    <!-- 부트스트랩 추가 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .crad-img-top {
+            width: 100%;
+            height: 20vw;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar.html 가져올 헤더 생성 -->
+    <header></header>
+
+    <!-- 받아온 게시물을 정렬할 div (w-50)-->
+    <div class="container">
+        <!-- 게시물이 담길 div -->
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="article-list">
+
+        </div>
+    </div>
+</body>
+
+
+</html>

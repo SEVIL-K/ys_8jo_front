@@ -37,12 +37,18 @@
             <div class="mb-3 text-center">
                 <a href="/signup.html" class="link-info">회원가입</a>
             </div>
-            <div class="text-center">
+
+            <div class="mb-3 text-center">
                 <button type="button" class="btn btn-outline-primary" onclick="handleLogin()">로그인</button>
             </div>
 
-            <div class="text-center"></div>
-                
+            <div class="text-center">
+                <a id="kakao-login-btn" href="javascript:loginWithKakao()">
+                    <img src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" width="222" alt="카카오 로그인 버튼" />
+                </a>
+            </div>
+
+
         </form>
         <!-- kakaologin추가 -->
         <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.4.0/kakao.min.js"
@@ -52,9 +58,6 @@
             Kakao.init('2af4ee176178c8a381cc1764e0e2b976'); // 사용하려는 앱의 JavaScript 키 입력
         </script>
         
-        <a id="kakao-login-btn" href="javascript:loginWithKakao()">
-            <img src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" width="222" alt="카카오 로그인 버튼" />
-        </a>
         <p id="token-result"></p>
         <button class="api-btn" onclick="requestUserInfo()" style="visibility:hidden">사용자 정보 가져오기</button>
         

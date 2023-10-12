@@ -1,5 +1,4 @@
 console.log('디테일 js 로드')
-let articleId
 
 async function loadComments(articleId) {
     const response = await getComments(articleId)
@@ -15,7 +14,7 @@ async function loadComments(articleId) {
         <img class="mr-3" src="https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg" alt="프로필 이미지" width="50" height="50">
         <div class="media-body">
         <h5 class="mt-0 mb-1">${comment.user}}</h5>
-         ${comment.content}
+        ${comment.content}
         </div>
     </li>
         `
@@ -36,9 +35,6 @@ async function submitComment() {
 
     // 댓글 등록 후 새로고침
     loadComments(articleId)
-
-
-
 }
 
 async function loadArticles(articleId){
@@ -68,6 +64,7 @@ async function loadArticles(articleId){
 
 window.onload = async function () {
     const urlParams = new URLSearchParams(window.location.search)
+    console.log(urlParams)
     articleId = urlParams.get('article_id')
     console.log(articleId)
 

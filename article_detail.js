@@ -51,8 +51,8 @@ async function loadArticles(articleId){
     const newImage = document.createElement("img")
     
      // 이미지 없는 게시물에 기본형 보여주기
-        if (response.image) {
-            newImage.setAttribute("src", `${backend_base_url}${response.image}`)  // 경로 설정시 유의 ( / 갯수 console로 확인 )
+        if (response.picture) {
+            newImage.setAttribute("src", `${backend_base_url}${response.picture}`)  // 경로 설정시 유의 ( / 갯수 console로 확인 )
         } else {
             newImage.setAttribute("src", "https://post-phinf.pstatic.net/MjAyMDEyMTdfMTQz/MDAxNjA4MTk2MTAwODY3.QjNHvtYqACnS7--uS1q2EzVjaKZ-8UbvmG3rDdfug0kg.7iWwVgUyT-LMWdg7YSU-NtuMbd0kbD0S1eMoxjT2pQkg.PNG/21.png?type=w800_q75")  // 웹 이미지 삽입
     }

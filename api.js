@@ -29,7 +29,7 @@ async function postArticle() {
 
     formdata.append('title', title)
     formdata.append('content', content)
-    formdata.append('image', image)
+    formdata.append('picture', image)
 
     let token = localStorage.getItem("access")
 

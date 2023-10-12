@@ -8,37 +8,40 @@ window.onload = () => {
 async function handleSignup() {
     const email = document.getElementById("email").value
     const password = document.getElementById("password").value
+    const name = document.getElementById("name").value
     // 체크
     console.log(email, password)
     
-    const response = await fetch(`${backend_base_url}/signup`, {
+    const response = await fetch(`${backend_base_url}/accounts/signup/`, {
         headers: {
             'content-type' : 'application/json',
         },
         method: 'POST',
         body: JSON.stringify({
             "email": email,
-            "password":password
+            "password":password,
+            "name" : name
         })
     })
-
+    console.log(response)
     return response
 }
+
 async function handleLogin() {
     try {
         console.log("로긴연결");
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
         console.log(email, password);
-        const response = await fetch("http://127.0.0.1:8000/accounts/", {
-            headers: {
+        const response = await fetch(`${backend_base_url}/accounts/`, {
+        headers: {
             "content-type": "application/json",
-            },
-            method: "POST",
-            body: JSON.stringify({
+        },
+        method: "POST",
+        body: JSON.stringify({
             email: email,
             password: password,
-            }),
+        }),
     });
     if (!response.ok) {
         throw new Error(

@@ -33,10 +33,9 @@ window.onload = async function loadArticles() {
             // 이미지 넣기
             const articleImage = document.createElement("img")
             articleImage.setAttribute("class", "card-img-top")
-
             // 이미지 없는 게시물에 기본형 보여주기
-            if (article.image) {
-                articleImage.setAttribute("src", `${backend_base_url}${article.image}`)  // 경로 설정시 유의 ( / 갯수 console로 확인 )
+            if (article.picture) {
+                articleImage.setAttribute("src", `${backend_base_url}${article.picture}`)  // 경로 설정시 유의 ( / 갯수 console로 확인 )
             } else {
                 articleImage.setAttribute("src", "https://post-phinf.pstatic.net/MjAyMDEyMTdfMTQz/MDAxNjA4MTk2MTAwODY3.QjNHvtYqACnS7--uS1q2EzVjaKZ-8UbvmG3rDdfug0kg.7iWwVgUyT-LMWdg7YSU-NtuMbd0kbD0S1eMoxjT2pQkg.PNG/21.png?type=w800_q75")  // 웹 이미지 삽입
             }
